@@ -1,4 +1,5 @@
 #include<iostream>
+#include<cmath>
 using namespace std;
 
 
@@ -62,6 +63,24 @@ int decimalToHexadecimal(int num){
     }
     return ans;
 }
+// Conversion 6
+int hexadecimalToDecimal(int num){
+    int ans=0;
+    int x =1;
+    while(num>0){
+        int y=num%10;
+        ans +=x*y;
+        x*=16;
+        num/=10;
+    }
+    return ans;
+
+}
+//Conversion 7
+int binaryToOctal(long num){
+    int ans=0;
+
+}
 int main(){
     int n;
     cin>>n;
@@ -71,5 +90,7 @@ int main(){
     cout<<"Decimal to Octal: "<<decimalToOctal(n)<<endl;
     cout<<"Octal to Decimal: "<<octalToDecimal(n)<<endl;
     cout<<"Decimal to Hexadecimal: "<<decimalToHexadecimal(n)<<endl;
+    cout<<"Hexadecimal to Decimal: "<<hexadecimalToDecimal(n)<<endl;
+    
     return 0;
 }
