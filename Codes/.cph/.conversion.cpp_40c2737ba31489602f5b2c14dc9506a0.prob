@@ -1,0 +1,1 @@
+{"name":"Local: conversion","url":"d:\\Projects\\Data-Structures-and-Algorithms\\Codes\\conversion.cpp","tests":[{"id":1729308116517,"input":"101","output":"5"},{"id":1729308146777,"input":"111","output":"7"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Projects\\Data-Structures-and-Algorithms\\Codes\\conversion.cpp","group":"local","local":true}
