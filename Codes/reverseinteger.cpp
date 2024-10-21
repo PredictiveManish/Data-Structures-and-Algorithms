@@ -1,31 +1,30 @@
-#include <iostream>
-#include <limits> // For std::numeric_limits
+#include<iostream>
 using namespace std;
-
-int reverse(int n) {
-    int reversedNumber = 0;
-    while (n != 0) {
-        int digit = n % 10;
-        // Check for overflow
-        if (reversedNumber > (std::numeric_limits<int>::max() / 10) ||
-            (reversedNumber == std::numeric_limits<int>::max() / 10 && digit > 7)) {
-            return 0; // Overflow, return 0 or handle as needed
+int linearSearch(int arr[], int n, int key){
+    for(int i =0; i<n;i++){
+        if(arr[i]==key){
+            return i;
         }
-        if (reversedNumber < (std::numeric_limits<int>::min() / 10) ||
-            (reversedNumber == std::numeric_limits<int>::min() / 10 && digit < -8)) {
-            return 0; // Underflow, return 0 or handle as needed
-        }
-        reversedNumber = reversedNumber * 10 + digit;
-        n /= 10;
+        
     }
-    return reversedNumber;
+    return -1;
 }
+int main(){
 
-int main() {
     int n;
-    cin >> n;
+    cin>>n;
 
-    cout << "The reversed number of input is: " << reverse(n) << endl;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
 
-    return 0;
+    }
+    int key;
+    cin>>key;
+
+cout<<linearSearch(arr, n, key);
+
+return 0;
+
+
 }
